@@ -1,0 +1,16 @@
+
+.menu_bar{
+  background-color: #CEECF5;
+}
+body{
+  font-family: 'Noto Serif KR', sans-serif;
+}
+a{
+  text-decoration:none !important;
+}
+td,th{
+  vertical-align : middle !important;
+}
+form{
+  display:inline;
+}

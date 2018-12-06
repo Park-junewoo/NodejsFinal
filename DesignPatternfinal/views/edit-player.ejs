@@ -1,0 +1,59 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (player) { %>
+      <h3>&nbsp;&nbsp;선수 수정</h3>
+      <br>
+        <form  action="" method="post">
+            <div>
+                <div class="col-md-4">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="first-name" value="<%= player.first_name %>" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="last-name" value="<%= player.last_name %>" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" id="username" value="<%= player.user_name %>" required disabled title="유저 이름은 바꿀 수 없습니다">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="number">Number</label>
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" value="<%= player.number %>" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="position">Position</label>
+                    <select id="position" name="position" class="form-control" required>
+                        <option selected><%= player.position %></option>
+                        <option>Goalkeeper</option>
+                        <option>Center Back</option>
+                        <option>Right Back</option>
+                        <option>Left Back</option>
+                        <option>Defensive Midfielder</option>
+                        <option>Central Midfielder</option>
+                        <option>Attacking Midfielder</option>
+                        <option>Right Wing Forward</option>
+                        <option>Left Wing Forward</option>
+                        <option>Striker</option>
+                    </select>
+                </div>
+            </div>
+            <p>
+            <p align="right">
+            <button type="submit" class="btn btn-info float-right">수정 완료</button>
+            <a class="btn btn-info btn-right" href="/home">뒤로가기</a>
+            </p>
+        </form>
+    <% } else { %>
+        <p class="text-center">선수를 추가 하시려면 <a href="/add" >여기</a> 를 눌러주세요</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <h3>&nbsp;&nbsp;선수 추가</h3>
+        <br>
+        <form action="" method="post" enctype="multipart/form-data">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                </div>
+            <div>
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="position" name="position" class="form-control" required>
+                        <option selected disabled>포지션을 골라주세요</option>
+                        <option>Goalkeeper</option>
+                        <option>Center Back</option>
+                        <option>Right Back</option>
+                        <option>Left Back</option>
+                        <option>Defensive Midfielder</option>
+                        <option>Central Midfielder</option>
+                        <option>Attacking Midfielder</option>
+                        <option>Right Wing Forward</option>
+                        <option>Left Wing Forward</option>
+                        <option>Striker</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>선수 사진</b></label><br>
+                    <input type="file" name="image" id="player-img" class="btn btn " required>
+                </div>
+            </div>
+            <p align="right">
+            <button type="submit" class="btn btn-info">선수 추가</button>
+            <a class="btn btn-info" href="/home">뒤로가기</a>
+            </p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
