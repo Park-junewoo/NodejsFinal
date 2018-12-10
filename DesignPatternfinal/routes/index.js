@@ -8,7 +8,7 @@ router.get("/home",function (req, res){
               res.redirect('/home');
           }
           res.render('index.ejs', {
-          title: "WelCome Soccer Player"
+          title: "WelCome Soccer Player Board"
           ,players: result
           });
     });
